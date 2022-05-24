@@ -1,0 +1,15 @@
+@use '../util' as *;
+
+.toggle {
+    border: none;
+
+    &__wrapper {
+        
+    }
+    &__button {
+        width: rem(16);
+        height: rem(16);
+        border-radius: 50%;
+        background-color: var(--bg-toggle);
+    }
+}

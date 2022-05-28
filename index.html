@@ -22,92 +22,205 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body class="container dark">
+<body class="container">
   <header>
     <div class="title">
       <h1>Social Media Dashboard</h1>
-      <div>Total follewers: 23,005</div>
+      <span>Total followers: 23,005</span>
     </div>
-    <fieldset class="toggle" aria-label="theme toggle" role="radiogroup">
-      <label for="light">Light</label>
-      <div class="toggle__wrapper">
-        <input type="radio" name="theme" id="light" />
-        <input type="radio" name="theme" id="dark" />
-        <input type="radio" name="theme" id="system" checked />
-        <span aria-hidden="true" class="c-toggle__background"></span>
-        <span aria-hidden="true" class="c-toggle__button"></span>
-      </div>
-      <label for="system">System</label>
-      <label for="dark">Dark</label>
-    </fieldset>
+    <div class="toggle">
+      <input type="checkbox" id="theme" />
+      <label for="theme"></label>
+    </div>
   </header>
   <main>
+    <section class="users">
+      <div class="list">
+        <div class="card large facebook">
+          <div class="user">
+            <img src="/images/icon-facebook.svg" alt="facebook" />
+            <span class="username">@nathanf</span>
+          </div>
+          <div class="followers">
+            <div class="count">1987</div>
+            <div class="text">FOLLOWERS</div>
+          </div>
+          <div class="status">
+            <img class="caret" src="/images/icon-up.svg" />
+            <span>12 Today</span>
+          </div>
+        </div>
+        <div class="card large twitter">
+          <div class="user">
+            <img src="/images/icon-twitter.svg" alt="twitter" />
+            <span class="username">@nathanf</span>
+          </div>
+          <div class="followers">
+            <div class="count">1044</div>
+            <div class="text">FOLLOWERS</div>
+          </div>
+          <div class="status">
+            <img class="caret" src="/images/icon-up.svg" />
+            <span>99 Today</span>
+          </div>
+        </div>
+        <div class="card large instagram">
+          <div class="user">
+            <img src="/images/icon-instagram.svg" alt="instagram" />
+            <span class="username">@realnathanf</span>
+          </div>
+          <div class="followers">
+            <div class="count">11k</div>
+            <div class="text">FOLLOWERS</div>
+          </div>
+          <div class="status">
+            <img class="caret" src="/images/icon-up.svg" />
+            <span>1099 Today</span>
+          </div>
+        </div>
+        <div class="card large youtube">
+          <div class="user">
+            <img src="/images/icon-youtube.svg" alt="youtube" />
+            <span class="username">Nathan F.</span>
+          </div>
+          <div class="followers">
+            <div class="count">8239</div>
+            <div class="text">FOLLOWERS</div>
+          </div>
+          <div class="status down">
+            <img class="caret" src="/images/icon-down.svg" />
+            <span>138 Today</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="overview">
+      <h2>Overview - Today</h2>
+      <div class="list">
+        <div class="card small">
+          <div class="stats">
+            <div class="name">Page Views</div>
+            <div class="count">88</div>
+          </div>
+          <div class="platform-icon">
+            <div>
+              <img src="/images/icon-facebook.svg" alt="facebook" />
+            </div>
+            <div class="status">
+              <img class="caret" src="/images/icon-up.svg" />
+              <span>3%</span>
+            </div>
+          </div>
+        </div>
+        <div class="card small">
+          <div class="stats">
+            <div class="name">Likes</div>
+            <div class="count">52</div>
+          </div>
+          <div class="platform-icon">
+            <div>
+              <img src="/images/icon-facebook.svg" alt="facebook" />
+            </div>
+            <div class="status down">
+              <img class="caret" src="/images/icon-down.svg" />
+              <span>2%</span>
+            </div>
+          </div>
+        </div>
+        <div class="card small">
+          <div class="stats">
+            <div class="name">Likes</div>
+            <div class="count">3432</div>
+          </div>
+          <div class="platform-icon">
+            <div>
+              <img src="/images/icon-instagram.svg" alt="instagram" />
+            </div>
+            <div class="status">
+              <img class="caret" src="/images/icon-up.svg" />
+              <span>2245%%</span>
+            </div>
+          </div>
+        </div>
+        <div class="card small">
+          <div class="stats">
+            <div class="name">Profile Views</div>
+            <div class="count">65K</div>
+          </div>
+          <div class="platform-icon">
+            <div>
+              <img src="/images/icon-instagram.svg" alt="instagram" />
+            </div>
+            <div class="status">
+              <img class="caret" src="/images/icon-up.svg" />
+              <span>13687%</span>
+            </div>
+          </div>
+        </div>
+        <div class="card small">
+          <div class="stats">
+            <div class="name">Retweets</div>
+            <div class="count">117</div>
+          </div>
+          <div class="platform-icon">
+            <div>
+              <img src="/images/icon-twitter.svg" alt="twitter" />
+            </div>
+            <div class="status">
+              <img class="caret" src="/images/icon-up.svg" />
+              <span>303%</span>
+            </div>
+          </div>
+        </div>
+        <div class="card small">
+          <div class="stats">
+            <div class="name">Likes</div>
+            <div class="count">117</div>
+          </div>
+          <div class="platform-icon">
+            <div>
+              <img src="/images/icon-twitter.svg" alt="twitter" />
+            </div>
+            <div class="status">
+              <img class="caret" src="/images/icon-up.svg" />
+              <span>559%</span>
+            </div>
+          </div>
+        </div>
+        <div class="card small">
+          <div class="stats">
+            <div class="name">Likes</div>
+            <div class="count">308</div>
+          </div>
+          <div class="platform-icon">
+            <div>
+              <img src="/images/icon-youtube.svg" alt="youtube" />
+            </div>
+            <div class="status down">
+              <img class="caret" src="/images/icon-down.svg" />
+              <span>19%</span>
+            </div>
+          </div>
+        </div>
+        <div class="card small">
+          <div class="stats">
+            <div class="name">Total Views</div>
+            <div class="count">1408</div>
+          </div>
+          <div class="platform-icon">
+            <div>
+              <img src="/images/icon-youtube.svg" alt="youtube" />
+            </div>
+            <div class="status down">
+              <img class="caret" src="/images/icon-down.svg" />
+              <span>12%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
-
-  Social Media Dashboard
-  Total Followers: 23,004
-
-  Dark Mode
-
-  
-
-  @nathanf
-  1987
-  Followers
-  12 Today
-
-  @nathanf
-  1044
-  Followers
-  99 Today
-
-  @realnathanf
-  11k
-  Followers
-  1099 Today
-
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
-
-
-
-  Overview - Today
-
-  Page Views
-  87
-  3%
-
-  Likes
-  52
-  2%
-
-  Likes
-  5462
-  2257%
-
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.

@@ -1,5 +1,129 @@
 @use '../util' as *;
 
 .card {
-    padding: rem(20);
+    cursor: pointer;
+    width: 100%;
+    padding: rem(25);
+    border-radius: rem(5);
+    background: var(--color-bg-card);
+    transition: background .15s ease-in-out;
+
+    &:hover {
+        background: var(--color-bg-card-hover);
+    }
+    
+    @include breakpoint(large) {
+        width: rem(255);
+    }
+
+    .status {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: rem(12);
+        font-weight: 700;
+        color: var(--limegreen);
+        
+        &.down {
+            color: var(--brightred);
+        }
+        .caret {
+            margin-right: rem(4);
+        }
+    }
+
+    &.large {
+        height: rem(216);
+        border-top: solid 5px;
+        text-align: center;
+
+        &.facebook {
+            border-color: var(--facebook);
+        }
+        &.twitter {
+            border-color: var(--twitter);
+        }
+        &.instagram {
+            position: relative;
+            overflow: hidden;
+            border: none;
+            padding-top: rem(30);
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                height: rem(5);
+                width: 100%;
+                top: 0;
+                left: 0;
+                background: var(--instagram);
+            }
+        }
+        &.youtube {
+            border-color: var(--youtube);
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: rem(28);
+
+            span {
+                font-weight: 700;
+                font-size: rem(12);
+                padding-left: rem(8);
+                color: var(--color-text-desaturated);
+            }
+        }
+        .followers {
+            margin-bottom: rem(25);
+
+            .count {
+                font-weight: 700;
+                font-size: rem(56);
+                margin-bottom: rem(9);
+                line-height: 1;
+            }
+            .text {
+                font-size: rem(12);
+                text-transform: uppercase;
+                font-weight: 400;
+                letter-spacing: rem(5);
+                color: var(--color-text-desaturated);
+            }
+        }
+    }
+    &.small {
+        display: flex;
+        justify-content: space-between;
+
+        > * {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: rem(23);
+
+            &:last-child {
+                align-items: flex-end;
+            }
+        }
+
+        .stats {
+            
+            .name {
+                color: var(--color-text-desaturated);
+                font-size: rem(14);
+            }
+            .count {
+                font-weight: 700;
+                font-size: rem(32);
+            }
+        }
+        
+        .status {
+            font-size: rem(14);
+        }
+    }
 }

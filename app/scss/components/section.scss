@@ -1,0 +1,22 @@
+@use '../util' as *;
+
+section {
+
+    > .list {
+        display: grid;
+        gap: rem(30);
+        grid-template-columns: 1fr;
+
+        @include breakpoint(medium) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include breakpoint(large) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &.overview {
+        margin-top: rem(40);
+    }
+    
+}

@@ -1,15 +1,51 @@
 @use '../util' as *;
 
 .toggle {
-    border: none;
-
-    &__wrapper {
+    display: flex;
+    align-items: center;
+    
+    label {
+        color: var(--color-text-desaturated);
+        font-weight: 700;
+        order: -1;
         
+        &:before {
+            content: "Dark Mode";
+            display: block;
+        }
     }
-    &__button {
-        width: rem(16);
-        height: rem(16);
-        border-radius: 50%;
-        background-color: var(--bg-toggle);
+    
+    input {
+        padding: 3px;
+        width: rem(48);
+        height: rem(24);
+        margin-left: rem(18);
+        border-radius: rem(20);
+        display: flex;
+        appearance: none;
+        position: relative;
+        background-image: var(--bg-toggle);
+        transition: all .1s ease-out;
+        
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: rem(3);
+            width: rem(18);
+            height: rem(18);
+            border-radius: 50%;
+            background-color: var(--color-bg-top-pattern);
+            transition: all .1s ease-out;
+        }
+        &:checked:after {
+            // x = input-width - input-padding-left-right - 2 switcher-width
+            left: rem(27);// width + padding-left + x?
+        }
+        &:checked + label:before {
+            content: "Light Mode";
+        }
     }
+
+    
 }

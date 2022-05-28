@@ -4,10 +4,12 @@ h1,
 h2, 
 h3 {
     margin-top: 0;
+    line-height: 1.1;
 }
 h1 {
     font-size: rem(24);
-    
+    margin-bottom: 3px;
+
     @include breakpoint(large) {
         font-size: rem(28);
     }
@@ -17,4 +19,19 @@ a,
 a:visited, 
 a:active {
     text-decoration: none;
+}
+
+.text {
+    &-sm {
+        font-size: rem(14);
+    }
+    &-md {
+        font-size: rem(18);
+    }
+    &-lg {
+        font-size: rem(32);
+    }
+    &-xx-lg {
+        font-size: rem(40);
+    }
 }

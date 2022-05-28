@@ -1,9 +1,17 @@
 @use '../util' as *;
 
 header {
-    @include breakpoint(large) {
+    margin-top: rem(36);
+    margin-bottom: rem(46);
+
+    @include breakpoint(medium) {
         display: flex;
         justify-content: space-between;
     }
-    
+
+    span {
+        font-size: rem(14);
+        font-weight: 700;
+        color: var(--color-text-desaturated);
+    }
 }
